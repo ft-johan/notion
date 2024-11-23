@@ -1,7 +1,7 @@
 import React from "react";
 import { Editor } from "novel";
 import { type Editor as TipTapEditor } from "@tiptap/core";
-import { Card, CardContent } from "@/components/ui/card";
+
 
 type NovelEditorProps = {
   setContent: any;
@@ -9,9 +9,9 @@ type NovelEditorProps = {
 };
 export default function NovelEditor({ setContent, title }: NovelEditorProps) {
   return (
-    <Card className="">
-      <CardContent>
-        <h2 className="pt-4 pb-3">{title}</h2>
+    <div className="">
+      
+        
         <Editor
           defaultValue={{
             type: "doc",
@@ -22,9 +22,9 @@ export default function NovelEditor({ setContent, title }: NovelEditorProps) {
             setContent(editor?.getHTML());
           }}
           disableLocalStorage={true}
-          className="rounded-md border shadow-none"
+          className="bg-black"
         />
-      </CardContent>
-    </Card>
+      
+    </div>
   );
 }
